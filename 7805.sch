@@ -1,0 +1,346 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L VCC #PWR3
+U 1 1 5AC34165
+P 3200 2650
+F 0 "#PWR3" H 3200 2500 50  0001 C CNN
+F 1 "VCC" H 3200 2800 50  0000 C CNN
+F 2 "" H 3200 2650 50  0001 C CNN
+F 3 "" H 3200 2650 50  0001 C CNN
+	1    3200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR4
+U 1 1 5AC34179
+P 4100 3650
+F 0 "#PWR4" H 4100 3400 50  0001 C CNN
+F 1 "GND" H 4100 3500 50  0000 C CNN
+F 2 "" H 4100 3650 50  0001 C CNN
+F 3 "" H 4100 3650 50  0001 C CNN
+	1    4100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L L7805 U1
+U 1 1 5AC3418D
+P 4100 2650
+F 0 "U1" H 3950 2775 50  0000 C CNN
+F 1 "L7805" H 4100 2775 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 4125 2500 50  0001 L CIN
+F 3 "" H 4100 2600 50  0001 C CNN
+	1    4100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C1
+U 1 1 5AC342C0
+P 3400 3100
+F 0 "C1" H 3425 3200 50  0000 L CNN
+F 1 "1000uF" H 3425 3000 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P2.50mm_P5.00mm" H 3400 3100 50  0001 C CNN
+F 3 "" H 3400 3100 50  0001 C CNN
+	1    3400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 5AC342EB
+P 3650 3100
+F 0 "C2" H 3660 3170 50  0000 L CNN
+F 1 ".1uF" H 3660 3020 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3650 3100 50  0001 C CNN
+F 3 "" H 3650 3100 50  0001 C CNN
+	1    3650 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C3
+U 1 1 5AC3433E
+P 4550 3100
+F 0 "C3" H 4575 3200 50  0000 L CNN
+F 1 "100uF" H 4575 3000 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm_P7.50mm" H 4550 3100 50  0001 C CNN
+F 3 "" H 4550 3100 50  0001 C CNN
+	1    4550 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C4
+U 1 1 5AC34381
+P 4800 3100
+F 0 "C4" H 4810 3170 50  0000 L CNN
+F 1 ".01uF" H 4810 3020 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4800 3100 50  0001 C CNN
+F 3 "" H 4800 3100 50  0001 C CNN
+	1    4800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2650 3800 2650
+Wire Wire Line
+	3400 2950 3400 2650
+Connection ~ 3400 2650
+Wire Wire Line
+	3650 3000 3650 2650
+Connection ~ 3650 2650
+Wire Wire Line
+	3400 3250 3400 3600
+Wire Wire Line
+	3400 3600 4800 3600
+Wire Wire Line
+	4800 3600 4800 3200
+Wire Wire Line
+	4550 3250 4550 3600
+Connection ~ 4550 3600
+Wire Wire Line
+	3650 3200 3650 3600
+Connection ~ 3650 3600
+Wire Wire Line
+	4100 2950 4100 3650
+Connection ~ 4100 3600
+Wire Wire Line
+	4550 2950 4550 2650
+Wire Wire Line
+	4400 2650 4800 2650
+Wire Wire Line
+	4800 2650 4800 3000
+Connection ~ 4550 2650
+$Comp
+L +5V #PWR5
+U 1 1 5AC3457F
+P 4800 2650
+F 0 "#PWR5" H 4800 2500 50  0001 C CNN
+F 1 "+5V" H 4800 2790 50  0000 C CNN
+F 2 "" H 4800 2650 50  0001 C CNN
+F 3 "" H 4800 2650 50  0001 C CNN
+	1    4800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J1
+U 1 1 5AC345FC
+P 2800 2750
+F 0 "J1" H 2800 2850 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2800 2550 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 2800 2750 50  0001 C CNN
+F 3 "" H 2800 2750 50  0001 C CNN
+	1    2800 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR1
+U 1 1 5AC34633
+P 2600 2750
+F 0 "#PWR1" H 2600 2600 50  0001 C CNN
+F 1 "VCC" H 2600 2900 50  0000 C CNN
+F 2 "" H 2600 2750 50  0001 C CNN
+F 3 "" H 2600 2750 50  0001 C CNN
+	1    2600 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR2
+U 1 1 5AC346BC
+P 2600 2850
+F 0 "#PWR2" H 2600 2600 50  0001 C CNN
+F 1 "GND" H 2600 2700 50  0000 C CNN
+F 2 "" H 2600 2850 50  0001 C CNN
+F 3 "" H 2600 2850 50  0001 C CNN
+	1    2600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J3
+U 1 1 5AC34781
+P 5650 2600
+F 0 "J3" H 5650 2700 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 5650 2400 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 5650 2600 50  0001 C CNN
+F 3 "" H 5650 2600 50  0001 C CNN
+	1    5650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR6
+U 1 1 5AC347F0
+P 5450 2600
+F 0 "#PWR6" H 5450 2450 50  0001 C CNN
+F 1 "+5V" H 5450 2740 50  0000 C CNN
+F 2 "" H 5450 2600 50  0001 C CNN
+F 3 "" H 5450 2600 50  0001 C CNN
+	1    5450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR7
+U 1 1 5AC3488E
+P 5450 2700
+F 0 "#PWR7" H 5450 2450 50  0001 C CNN
+F 1 "GND" H 5450 2550 50  0000 C CNN
+F 2 "" H 5450 2700 50  0001 C CNN
+F 3 "" H 5450 2700 50  0001 C CNN
+	1    5450 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03_Male J2
+U 1 1 5AC3497B
+P 5550 3250
+F 0 "J2" H 5550 3450 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 5550 3050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 5550 3250 50  0001 C CNN
+F 3 "" H 5550 3250 50  0001 C CNN
+	1    5550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03_Male J4
+U 1 1 5AC349EC
+P 6100 3250
+F 0 "J4" H 6100 3450 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 6100 3050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6100 3250 50  0001 C CNN
+F 3 "" H 6100 3250 50  0001 C CNN
+	1    6100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR8
+U 1 1 5AC34A52
+P 5800 3050
+F 0 "#PWR8" H 5800 2900 50  0001 C CNN
+F 1 "+5V" H 5800 3190 50  0000 C CNN
+F 2 "" H 5800 3050 50  0001 C CNN
+F 3 "" H 5800 3050 50  0001 C CNN
+	1    5800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR9
+U 1 1 5AC34B23
+P 6450 3400
+F 0 "#PWR9" H 6450 3150 50  0001 C CNN
+F 1 "GND" H 6450 3250 50  0000 C CNN
+F 2 "" H 6450 3400 50  0001 C CNN
+F 3 "" H 6450 3400 50  0001 C CNN
+	1    6450 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3150 5800 3150
+Wire Wire Line
+	5800 3050 5800 3350
+Wire Wire Line
+	5800 3250 5750 3250
+Connection ~ 5800 3150
+Wire Wire Line
+	5800 3350 5750 3350
+Connection ~ 5800 3250
+Wire Wire Line
+	6450 3400 6450 3150
+Wire Wire Line
+	6450 3150 6300 3150
+Wire Wire Line
+	6300 3250 6450 3250
+Connection ~ 6450 3250
+Wire Wire Line
+	6300 3350 6450 3350
+Connection ~ 6450 3350
+$Comp
+L R_Small R1
+U 1 1 5AC34DE7
+P 7200 2200
+F 0 "R1" H 7230 2220 50  0000 L CNN
+F 1 "R_Small" H 7230 2160 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 7200 2200 50  0001 C CNN
+F 3 "" H 7200 2200 50  0001 C CNN
+	1    7200 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 5AC34E8C
+P 7200 2550
+F 0 "D1" H 7200 2650 50  0000 C CNN
+F 1 "LED" H 7200 2450 50  0000 C CNN
+F 2 "LEDs:LED_D5.0mm_FlatTop" H 7200 2550 50  0001 C CNN
+F 3 "" H 7200 2550 50  0001 C CNN
+	1    7200 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7200 2400 7200 2300
+$Comp
+L +5V #PWR10
+U 1 1 5AC35272
+P 7200 2050
+F 0 "#PWR10" H 7200 1900 50  0001 C CNN
+F 1 "+5V" H 7200 2190 50  0000 C CNN
+F 2 "" H 7200 2050 50  0001 C CNN
+F 3 "" H 7200 2050 50  0001 C CNN
+	1    7200 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2100 7200 2050
+$Comp
+L GND #PWR11
+U 1 1 5AC3548D
+P 7200 2750
+F 0 "#PWR11" H 7200 2500 50  0001 C CNN
+F 1 "GND" H 7200 2600 50  0000 C CNN
+F 2 "" H 7200 2750 50  0001 C CNN
+F 3 "" H 7200 2750 50  0001 C CNN
+	1    7200 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2700 7200 2750
+$EndSCHEMATC
